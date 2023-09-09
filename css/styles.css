@@ -1,0 +1,52 @@
+/*COMENTARIO CCS*/
+/*SELECTORES*/
+/*selector universal*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*selector por etiqueta*/
+
+/*p{
+    background-color:yellow;
+}
+span{
+    background-color: aqua;
+}
+/*selector por id*/
+#titulo-principal{
+    color: aquamarine;
+    background-color: blue;
+}
+/*selector por clase*/
+.rojo{
+    color: red;
+}
+.green{
+    color: green;
+}
+/*selector por grupo*/
+
+h5, h6{
+    background-color: rgb(20, 213, 220);
+}
+
+/*textos*/
+
+p{
+    color: blueviolet;
+    font-size: 100px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    
+    /*text-decoration-line: line-through;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color:black; 
+    text-decoration-thickness: 5px;*/
+    text-decoration: underline wavy red 8px;
+}
