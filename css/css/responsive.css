@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: rgb(71, 71, 71);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    height: 80px;
+}
+
+nav p{
+    font-weight: bold;
+    color: whitesmoke;
+    font-size: 22px;
+}
+
+nav label{
+    display: flex;
+}
+nav input:checked ~ aside{
+    display: flex;
+}
+
+
+
+nav label{
+    z-index: 2;
+}
+
+nav input{
+    display: none;
+}
+
+nav label img{
+    width: 30px;
+}
+nav aside{
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(61, 85, 85);
+}
+nav ul{
+    display: none;
+    list-style: none;
+    gap: 30px;
+    color: aliceblue;
+}
+
+/*RESPONDIVE DESIGN*/
+
+@media (min-width: 768px){
+    nav ul{
+        display: flex;
+    }
+    
+    nav label{
+    display: none;
+}
+}
+

@@ -15,7 +15,7 @@
 }
 span{
     background-color: aqua;
-}
+}*/
 /*selector por id*/
 #titulo-principal{
     color: aquamarine;
@@ -38,7 +38,7 @@ h5, h6{
 
 p{
     color: blueviolet;
-    font-size: 100px;
+    font-size: 20px;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -48,5 +48,41 @@ p{
     text-decoration-style: wavy;
     text-decoration-color:black; 
     text-decoration-thickness: 5px;*/
-    text-decoration: underline wavy red 8px;
+    /*text-decoration: underline wavy red 8px;
+    text-transform: lowercase;*/
+    text-indent: 20px;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    line-height: 50px;
+    word-spacing: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: brown;
+    font-weight: 900;
+    font-size: xx-large;
+}
+
+ul{
+    list-style: none;
+}
+
+span{
+    text-shadow: 5px -5px 10px red;
+}
+
+/*tamanos*/
+
+article{
+    background-color: blueviolet;
+    height: 100px;
+    width: 300px;
+    text-align: center;
+}
+
+main{
+    background-color: black;
+    height: 600px;
+    width: 500px;
 }

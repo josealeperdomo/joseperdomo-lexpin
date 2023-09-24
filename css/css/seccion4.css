@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* display */
+
+/*p{
+display: none;
+}*/
+/* flexbox */
+
+main{
+    display: flex; /*fila*/
+    flex-wrap: wrap;
+   /* flex-direction: column;*/
+    justify-content:center; /*controla eje x*/
+    align-items: center; /*controla eje y*/
+    gap: 20px; /*espaciado*/
+    height: 100vh;
+    background-color: black;
+}
+main .rojo{
+    width: 70px;
+    height: 70px;
+    background-color: red;
+}
+
+main .verde{
+    width: 70px;
+    height: 70px;
+    background-color: green;
+    background-image: url(image/donatelo.jfif);
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: brown;
+}
+
+nav img{
+    width: 50px;
+    height: 40px;
+}
+nav ul{
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: sans-serif;
+}
