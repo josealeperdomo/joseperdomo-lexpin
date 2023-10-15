@@ -1,0 +1,25 @@
+@mixin nombre($color, $radio)
+    padding: 10px 15px
+    border: none
+    border-radius: $radio
+    background-color: $color
+    &:active
+        padding: 5px 10px
+
+
+@mixin flexBlox($direccion:row,$justificacion:center,$align:center)
+    display: flex
+    flex-direction: $direccion
+    justify-content: $justificacion
+    align-items: $align
+
+@mixin boton($nombre,$propiedad1,$valor1,$propiedad2,$valor2)
+    .boton-#{$nombre} //.boton-inicio
+        @if $propiedad1 == color 
+            #{$propiedad1}: $valor1 //color: blue
+        @else 
+            color: blue
+        @if $propiedad2 == padding
+            #{$propiedad2}: $valor2
+        @else
+            padding: 20px 30px

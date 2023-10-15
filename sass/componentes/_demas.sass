@@ -1,0 +1,136 @@
+
+//Variables (espacio en memoria)//
+
+
+//anidamiento (seleccion de la estructura de los hijos de un elemento)//
+
+main
+    width: $tamanop
+    height: $tamanop
+    background-color: $variable
+    color: white
+    &:hover
+        background-color: rgb(15,15,15)
+    h1
+        font-size: 30px
+    p
+        font-size:10px
+        color: aqua
+
+// los mixin (CON Y SIN PARAMETROS: SON FRAGMENTOS DE CODIGO DE CODIGO QUE PUEDEN SER REUTILIZADO)
+
+
+    
+.section
+    height: 400px
+    background-color: blue
+    @include flexBlox()
+
+.aceptar
+    @include nombre(green, 50px)
+    &:hover
+        background-color: rgba(34,139,34, 0.7)
+
+.eliminar
+    @include nombre(red, 50px)
+    &:hover
+        background-color: rgba(255, 0, 0, 0.7)
+
+// BEM (BLOCK ELEMENT MODIFIER)//
+
+.header
+    background-color: gray
+    &__titulo
+        font-size: 50px
+        color: aqua
+    &__boton
+        padding: 20px 30px
+        color: white
+        border: none
+        &--red
+            background-color: red
+        &--green
+            background-color: green
+
+// @extend ----> nos permite reutilizar estilos///import css-variables from 
+
+.boton-secundario
+    @extend .header__boton
+    background-color: yellow
+
+// condicionales @if (si se cmple la condición)  @else (no se cumple en el if)//
+// @else if (otra condicion) //
+
+//operadores:
+//==igualdad por ejemplo 1 == 1
+// !=desigualdad por ej : 2 != 3
+// > mayor que ej: 2 > 5
+// < menor que ej: 5 > 6
+// >= mayor o igual 18 >= 18
+// >= menor o igual 10 <= 10
+
+
+
+#{$selector}
+    @if $condicion >= 5
+        #{$propiedad}: $colorverde
+    @else if 3 == 4
+        background-color: yellow
+    @else if 4 != 4
+        background-color: black
+    @else 
+        background-color: red
+
+    @if 5 != 5
+        color: grey
+    @else 
+        color: white
+
+
+//INTERPOLAR
+
+
+
+@include boton('inicio',color,aqua,padding,10px 20px)
+@include boton('final',color,brown,padding, 50px 40px)
+
+//bucles//
+
+//@for
+
+@for $contador from 1 through 5
+    .division-#{$contador}
+        width: 100px
+        height: 100px
+        margin-bottom: 20px
+       
+        @if $contador == 5
+            background-color: green
+        @else
+            background-color: red 
+
+    //@each -------> nos permite recorrer una lista o un mapa
+
+$colors : red,green,blue
+     
+@each $color in $colors
+    .bg-#{$color}
+        background-color: $color
+
+// mapas (objeto)
+
+$temas : (primario:blue,secundario:green,resaltado:yellow)
+
+@each $nombre, $color in $temas
+        .#{$nombre}-tema // ====> primario
+            background-color: $color
+
+//funciones en sass ------> caja de herramientas que nos retorna un valor
+
+@function degradado($color1:black,$color2:black,$direction:to left)
+    @return linear-gradient($direction,$color1,$color2)
+
+.contenedor
+    width: 100%
+    height: 500px
+    background: degradado(green, yellow, to bottom)

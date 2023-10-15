@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  color: white;
+}
+main:hover {
+  background-color: rgb(15, 15, 15);
+}
+main h1 {
+  font-size: 30px;
+}
+main p {
+  font-size: 10px;
+  color: aqua;
+}
+
+.section {
+  height: 400px;
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.aceptar {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: green;
+}
+.aceptar:active {
+  padding: 5px 10px;
+}
+.aceptar:hover {
+  background-color: rgba(34, 139, 34, 0.7);
+}
+
+.eliminar {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: red;
+}
+.eliminar:active {
+  padding: 5px 10px;
+}
+.eliminar:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.header {
+  background-color: gray;
+}
+.header__titulo {
+  font-size: 50px;
+  color: aqua;
+}
+.header__boton, .boton-secundario {
+  padding: 20px 30px;
+  color: white;
+  border: none;
+}
+.header__boton--red {
+  background-color: red;
+}
+.header__boton--green {
+  background-color: green;
+}
+
+.boton-secundario {
+  background-color: yellow;
+}
+
+h4 {
+  background-color: green;
+  color: white;
+}
+
+.boton-inicio {
+  color: aqua;
+  padding: 10px 20px;
+}
+
+.boton-final {
+  color: brown;
+  padding: 50px 40px;
+}
+
+.division-1 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background-color: red;
+}
+
+.division-2 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background-color: red;
+}
+
+.division-3 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background-color: red;
+}
+
+.division-4 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background-color: red;
+}
+
+.division-5 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background-color: green;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.primario-tema {
+  background-color: blue;
+}
+
+.secundario-tema {
+  background-color: green;
+}
+
+.resaltado-tema {
+  background-color: yellow;
+}
+
+.contenedor {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(to bottom, green, yellow);
+}
+
+/*# sourceMappingURL=style.css.map */

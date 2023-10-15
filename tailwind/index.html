@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="bg-[rgb(0,0,0)] h-[60px] flex fixed w-full justify-between items-center px-6">
+        <p class="text-white font-bold text-2xl">LOGO</p>
+        <ul class="text-orange-300 gap-10 hidden sm:flex">
+            <li class="hover:cursor-pointer hover:underline">Inicio</li>
+            <li class="hover:cursor-pointer hover:underline">Contacto</li>
+            <li class="hover:cursor-pointer hover:underline">Nosotros</li>
+        </ul>
+        <input type="checkbox" name="menu-d" id="menu-d" class="hidden peer/menu">
+        <label for="menu-d" class="w-[40px] sm:hidden z-10 hover:cursor-pointer"><img src="https://www.redeemclinic.co.uk/wp-content/uploads/2016/05/threelines.png" alt=""></label>
+        <aside class="hidden peer-checked/menu:block sm:peer-checked/menu:hidden fixed top-0 right-0 w-[250px] h-screen bg-black text-white pt-10">
+            menu lateral
+        </aside>
+    </nav>
+
+    <main class="h-screen bg-slate-900 flex flex-col justify-center items-center sm:bg-red-950 md:bg-green-600">
+        <h1 class="text-white text-7xl underline decoration-4">Hola</h1>
+        <span class="font-bold text-emerald-200">SOY UN MAIN</span>
+    </main>
+
+    <footer class="bg-orange-950">
+
+    </footer>
+</body>
+</html>

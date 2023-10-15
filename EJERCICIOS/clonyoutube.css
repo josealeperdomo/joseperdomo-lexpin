@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: century-gothic, sans-serif;
 }
 
 .navegacion{
@@ -186,7 +187,7 @@ label img:hover{
 }
 
 .categorias button{
-    padding: 5px 10px 5px 10px;
+    padding: 2px 10px 2px 10px;
     font-size: 20px;
     display: inline;
     border-radius: 20%;
@@ -210,18 +211,39 @@ label img:hover{
     position: fixed;
     padding-top: 70px;
     overflow: scroll;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+    overflow-x: hidden;
     display: flex;
 }
 
+#lateral::-webkit-scrollbar{
+    width: 12px;
+}
+
+#lateral::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+#lateral::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#lateral::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 #lateral button img{
-    width: 40px;
-    height: 40px;
-    background-position: center;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    margin-top: 15px;
 }
 
 #lateralcerrado button img{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
     position: absolute;
 }
@@ -265,6 +287,10 @@ label img:hover{
     padding-left: 10px;
 }
 
+h2{
+    font-size: small;
+}
+
 #lateralcerrado button{
     width: 75px;
     height: 100px;
@@ -288,8 +314,7 @@ h3{
     display: flex;
     position: absolute;
     align-items: center;
-    margin-left: -5px;
-    font-size: 12px;
+    font-size: 20px;
 }
 
 #menulateral:checked ~ #lateralcerrado{
@@ -302,6 +327,12 @@ h3{
     display: none;
 }
 
+#menulateral:checked ~ footer{
+    padding-left: 100px;
+    display: flex;
+    justify-content: center;
+}
+
 #menulateral:checked ~main{
     padding-left: 100px;
 }
@@ -309,6 +340,8 @@ h3{
 #menulateral:checked ~.categorias{
     margin-left: 100px;
 }
+
+
 
 main{
     background-color: white;
@@ -319,6 +352,28 @@ main{
     padding-top: 170px;
     grid-template-columns: repeat(3, 1fr);
     overflow: hidden;
+}
+
+body{
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .videito{
@@ -378,8 +433,12 @@ main{
 }
 
 footer{
-    background-color: red;
+    background-color: rgb(59, 59, 59);
+    color: white;
     height: 75px;
+    padding-left: 250px;
+    display: flex;
+    justify-content: center;
 }
 
 /*responsivo*/
@@ -425,12 +484,20 @@ footer{
         margin-left: 100px;
     }
 
+    footer{
+        padding-left: 100px;
+    }
+
     #lateralcerrado{
          display: flex;
     }
 
     .navegacion .crear1{
         display: none;
+    }
+
+    #lateral ul button{
+        width: 10px;
     }
 
     .navegacion .notificaciones{
@@ -452,6 +519,9 @@ footer{
         margin-left: 100px;
     }
 
+    footer{
+        padding-left: 100px;
+    }
 
     .navegacion .crear1{
         display: none;
@@ -485,8 +555,16 @@ footer{
         margin-left: 100px;
     }
 
+    footer{
+        padding-left: 100px;
+    }
+
     .navegacion .crear1{
         display: none;
+    }
+
+    #lateral ul button{
+        width: 10px;
     }
 
     .navegacion .notificaciones{
@@ -519,8 +597,16 @@ footer{
         margin-left: 100px;
     }
 
+    footer{
+        padding-left: 100px;
+    }
+
     .navegacion .crear1{
         display: none;
+    }
+
+    #lateral ul button{
+        width: 10px;
     }
 
     .navegacion .notificaciones{
@@ -553,8 +639,16 @@ footer{
         margin-left: 100px;
     }
 
+    footer{
+        padding-left: 100px;
+    }
+
     .navegacion .crear1{
         display: none;
+    }
+
+    #lateral ul button{
+        width: 10px;
     }
 
     .navegacion .notificaciones{
@@ -578,7 +672,7 @@ footer{
     main{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        height:  8200px;
+        height:  8400px;
         padding-left: 100px;
         padding-top: 160px;
     }
@@ -587,9 +681,16 @@ footer{
         margin-left: 100px;
     }
 
+    footer{
+        padding-left: 100px;
+    }
 
     .navegacion .crear1{
         display: none;
+    }
+
+    #lateralcerrado ul button{
+        width: 10px;
     }
 
     .navegacion .notificaciones{
