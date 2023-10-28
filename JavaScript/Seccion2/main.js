@@ -459,7 +459,9 @@ function Juegos(plataforma, nombre, creador) {
     this.creador = creador;
 
     this.mostrarInformacion = function () {
-        console.log(this.nombre);
+        console.log('Nombre: ' + this.nombre);
+        console.log(`Plataforma: ${this.plataforma}`);
+        console.log(`Creador: ${this.creador}`);
     }
 }
 
@@ -468,3 +470,201 @@ let juego3 = new Juegos('PC', 'FIFA', 'EA')
 console.log(juego3);
 juego3.mostrarInformacion()
 console.log(juego2);
+
+//---------------------------- CLASES 
+/*
+JUEGO DE MARIO = MARIO Y LUIGI
+
+objeto: player 1        objeto: player 2
+
+Atributos: (Caracteristicas distintas entre los players)
+Nombre: Mario           Nombre: Luigi
+color: Rojo             Color: verde
+
+Metodos:
+Saltar()
+Correr()
+Saludar()
+
+*/
+
+class Player{
+    constructor(nombre, color){
+        this._nombre = nombre;
+        this._color = color;
+    }
+    saltar(){
+
+    }
+    correr(){
+
+    }
+    saludar(){
+        return `Holaaaaaa soy ${this._nombre}`;
+    }
+
+    //get ---> mostar informacion
+    get nombre(){
+        return this._nombre;
+    }
+    //set n--> modificar
+    set nombre(nuevo){
+        this._nombre = nuevo;
+    }
+}
+
+let player1 = new Player('Mario','Rojo');
+let player2 = new Player('Luigi','Verde');
+
+//saludar
+console.log(player1.saludar());
+console.log(player2.saludar());
+
+//metodo get
+console.log(player1.nombre);
+
+//metodo set
+player1.nombre = 'Link';
+console.log(player1.nombre);
+
+//mostrando los players
+console.log(player1);
+console.log(player2);
+
+//==================== Subclases (Herencia)
+/*
+La herencia tambien llamada polimorfismo, nos permite crear objetps que comparten atributos y metods de un aclase padrem, pero que a su vez nos permite que tengan sus propios atributos y metodos
+
+*/
+
+class Enemigo extends Player{
+    constructor(nombre,color,fuerza){
+        super(nombre,color);  //referencia al padre
+        this._fuerza = fuerza;
+    }
+    get fuerza(){
+        return this._fuerza;
+    }
+    set fuerza(nuevafuerza){
+        return this._fuerza = nuevafuerza;
+    }
+}
+
+let enemigo1 = new Enemigo('Malvado', 'Amarillo', 750);
+console.log(enemigo1);
+console.log(enemigo1.saludar());
+console.log(enemigo1.fuerza);
+enemigo1.fuerza = 1000;
+console.log(enemigo1.fuerza);
+
+//ejemplos con carro
+
+class Carro{
+    constructor(marca,modelo,year,color){
+        this._marca = marca;
+        this._modelo = modelo;
+        this._year = year;
+        this._color = color;
+    }
+    encender(){
+        return 'el carro está encendido'
+    }
+    get mostrarinfo(){
+        return `Marca: ${this._marca}, Año: ${this._year}`
+    }
+}
+
+let carro1 = new Carro('Ford', 'Fiesta', 2020, 'Rojo');
+let carro2 = new Carro('Chevrolet','Corsa',2015,'Azul');
+console.log(carro1);
+console.log(carro2);
+console.log(carro1.encender());
+console.log(carro2.encender());
+console.log(carro1.mostrarinfo);
+
+/*
+
+    1) Crear una clase llamada Calculadora, que no tenga funcion constructora,
+    y que tenga los siguientes metodos: sumar, restar, multiplicar y dividir.
+
+
+    2) Crear una clase llamada Personaje, que tenga los siguientes atributos:
+    nombre, apodo, edad, salud, fuerza, rareza, y que tenga los siguientes metodos:
+    atacar, defender, saludar (Estos metodos deben imprimir en consola, solo eso (get)).
+    Debes crear 5 personajes con diferentes atributos y ejecutar los metodos de cada
+    uno.
+
+*/
+//1
+class Calculadora{
+    sumar(num1, num2){
+        return num1 + num2;
+    }
+    restar(num1, num2){
+        return num1 - num2;
+    }
+    multiplicar(num1, num2){
+        return num1 * num2
+    }
+    dividir(num1, num2){
+        return num1 / num2
+    }
+}
+
+let calcular = new Calculadora();
+
+console.log(calcular.multiplicar(4,2));
+
+//2
+class Personaje{
+    constructor(nombre,apodo,edad,salud,fuerza,rareza){
+        this._nombre = nombre
+        this._apodo = apodo
+        this._edad = edad
+        this._salud = salud
+        this._fuerza = fuerza
+        this._rareza = rareza
+    }
+    get atacar(){
+        return console.log(`${this._nombre} está atacando`);
+    }
+    get defender(){
+        return console.log(`${this._nombre} se está defendiendo`);
+    }
+    get saludar(){
+        console.log(`Hola, soy ${this._nombre}`);
+    }
+}
+
+let personaje1 = new Personaje('PacMan', 'Comefantasmas', 20, 100, 5, 'Especial')
+let personaje2 = new Personaje('Sonic', 'Erizo', 17, 100, 8, 'Raro')
+let personaje3 = new Personaje('Kratos', 'Dios de la Guerra', 200, 100, 10, 'Legendario')
+let personaje4 = new Personaje('Kang', 'El Conquistador', 40, 100, 10, 'Epico')
+let personaje5 = new Personaje('Galactus', 'El Devorador de mundos', 500, 100, 10, 'Legendario')
+
+console.log(personaje1);
+personaje1.atacar
+personaje1.defender
+personaje1.saludar
+
+console.log(personaje2);
+personaje2.atacar
+personaje2.defender
+personaje2.saludar
+
+console.log(personaje3);
+personaje3.atacar
+personaje3.defender
+personaje3.saludar
+
+console.log(personaje4);
+personaje4.atacar
+personaje4.defender
+personaje4.saludar
+
+console.log(personaje5);
+personaje5.atacar
+personaje5.defender
+personaje5.saludar
+
+
