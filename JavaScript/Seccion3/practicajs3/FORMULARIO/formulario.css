@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #c4def2;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+}
+
+button{
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    padding: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.correcto{
+    border-color: green;
+    background-color: greenyellow;
+}
+
+.incorrecto{
+    border-color: red;
+    background-color: palevioletred;
+}
