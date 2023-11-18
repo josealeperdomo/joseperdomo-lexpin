@@ -667,4 +667,132 @@ personaje5.atacar
 personaje5.defender
 personaje5.saludar
 
+//---------------------------------- BUCLES/LOOPS/CICLOS
 
+let verduras = ['Tomate', 'Lechuga', 'Zanahoria', 'Papa', 'Cebolla']
+
+//------For
+/*
+for ()
+1) let i = 0 ------> DECLARACION DE LA VARIABLE (CONTADORA)
+
+NOTA; CADA PARTE VA A SEPARAD POR UN ; 
+
+2) i < 10; --------> condicion que se verifica en cada iteración del ciclo
+
+3) i++ ------------> i = i + 1 despue de cada iteracion, la variable i se incrementa en 1
+
+SINTAXIS (COMO SE ESCRIBE UN CICLO FOR)
+
+for(let i = 0; i < 10; i++){
+    console.log('Hola mundo')
+}
+*/
+
+for(let i = 0; i <= 10; i++){
+    console.log(i);
+}
+
+//for con arrays de mujer
+
+for (let i = 0; i < verduras.length; i++){
+    console.log(verduras[i]);
+}
+
+//crea un ciclo que imprima solo los numeros pares del 0 al 100
+
+for(let i = 0; i <= 100; i++){
+   if(i % 2 === 0){
+    console.log(`El numero ${i} es par`);
+   } 
+}
+
+//otra forma
+
+for(let i = 2; i <= 100; i += 2){
+    console.log(`El numero ${i} es par otra forma`);
+}
+
+//-------- FOR IN
+//PARA ARRAYS
+
+for(let i in verduras){
+    console.log(verduras[i]);
+}
+
+//objetos 
+
+let bicicleta = {
+    marca: 'Mounain Bike',
+    rodado: 26,
+    color: 'Rojo',
+    frenos: 'Disco',
+    cambios: 21
+}
+
+for(let i in bicicleta){
+    console.log(i); //-----> devuelve cda una de las propiedades
+    console.log(bicicleta[i]); //-----. devuelve cada valor de la propiedad
+}
+
+//imprime en una sola variable el nombre apellido y edad de la siguiente variable
+
+let persona = {
+    nombre: 'eli',
+    apellido: 'atalle',
+    edad: 20
+}
+
+let acumulador = ''
+for(let i in persona){
+    acumulador += persona[i] + ' '
+    console.log(acumulador);
+}
+
+console.log(acumulador);
+
+/*
+PRIMERA ITERACION: ACUMULADOR = ELI 
+SEGUNDA ITERACION: ACUMULADOR = ELI ATTALE  
+TERCERA ITERACION: ACUMULADOR = ELI ATTALE 20
+*/
+
+//------------ FOR OF 
+// DEVUELVE EL ELEMNTO DIRECTAMENTE Y NO LA POSICION
+
+for(let i of verduras){
+    console.log(i);
+}
+
+
+//--------------- Ciclo while
+
+let contador = 0;
+
+while(contador <= 10) {
+    console.log(contador);
+    contador++;
+}
+
+//------------------------ CICLO DO WHILE
+//se ejecuta siempre al menos una vez
+
+let contador2 = 0;
+do{
+    console.log(contador2);
+    contador2++;
+}while(contador2 <= 10)
+
+
+//ejercicio 
+
+let compras = [['carne molida','carne mechada'], ['papas','batatas', 'cebollas'],['jamon','queso','salame']]
+console.log(compras[0][1]);
+
+// IMPRIME CADA UNO DE LOS ELEMENTOS DE LOS ARRAYS DEL ARRAY DE COMPRAS CON FOR
+
+for(let i in compras){
+    for(let j in compras[i]){
+        console.log(compras[i][j]);
+    }
+}

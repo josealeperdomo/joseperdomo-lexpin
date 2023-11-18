@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(119, 91, 91);
+}
+
+.nueva{
+    background-color: green;
+}
+
+.toggle{
+    color: firebrick;
+}
+
+.size{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.modo{
+    background-color: rgb(175, 188, 49);
+}
+
+img{
+    width: 100px;
+}
